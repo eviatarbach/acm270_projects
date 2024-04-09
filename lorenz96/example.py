@@ -23,3 +23,5 @@ x_phys = solve_ivp(lorenz96, [0, n_steps*dt], x0, t_eval=np.arange(0.0, n_steps*
 
 # Plot the RMSE between the physical and ML forecast
 plt.plot(np.sqrt(((x_ml - x_phys)**2).mean(axis=1)))
+
+plt.savefig("rmse.pdf")
